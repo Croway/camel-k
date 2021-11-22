@@ -21,8 +21,8 @@
       period: "5000"
     steps:
       - set-body:
-          constant: "Hello Yaml !!! ${env.foo}"
+          constant: "Hello Yaml !!! {{foo}}"
       - transform:
           simple: "${body.toUpperCase()}"
-      - log: "${env.foo}"
+      - log: "{{foo}}"
       - to: "log:info"
