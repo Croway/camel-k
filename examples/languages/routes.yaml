@@ -24,4 +24,5 @@
           constant: "Hello Yaml !!! ${env.foo}"
       - transform:
           simple: "${body.toUpperCase()}"
+      - log: "${env.foo}"
       - to: "log:info"
